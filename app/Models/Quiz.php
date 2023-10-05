@@ -16,6 +16,6 @@ class Quiz extends Model
 
 	public function media(): HasOne
 	{
-		return $this->hasOne(Media::class, 'id');
+		return $this->hasOne(Media::class, 'id', 'media_id');
 	}
 }

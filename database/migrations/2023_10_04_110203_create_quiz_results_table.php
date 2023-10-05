@@ -16,6 +16,7 @@ return new class extends Migration
 			$table->foreignId('quiz_id')->constrained();
 			$table->string('title');
 			$table->string('description');
+			$table->integer('media_id')->nullable();
             $table->timestamps();
         });
     }

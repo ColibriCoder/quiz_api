@@ -8,6 +8,7 @@ use App\Models\Quiz;
 use App\Models\QuizResult;
 use App\Models\QuizQuestion;
 use App\Models\QuizAnswer;
+use App\Models\Media;
 
 
 class DatabaseSeeder extends Seeder
@@ -17,36 +18,72 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+		$favoriteTypeOfMusicQuizImage = Media::factory()->create([
+			'path' => 'storage/mohammad-metri-1oKxSKSOowE-unsplash-min',
+			'extention' => 'jpg'
+		]);
+
 		$quiz = Quiz::factory()->create([
 			'title' => 'Whats your favorite type of music?',
-			'description' => 'Everyone has their music taste. Today, we’re gonna figure out what type of music is your favorite! We would like you to answer a few questions that would help us to figure it out.'
+			'description' => 'Everyone has their music taste. Today, we’re gonna figure out what type of music is your favorite! We would like you to answer a few questions that would help us to figure it out.',
+			'media_id' => $favoriteTypeOfMusicQuizImage->id
+		]);
+
+		$classicalMusicImage = Media::factory()->create([
+			'path' => 'storage/manuel-nageli-NsgsQjHA1mM-unsplash-min',
+			'extention' => 'jpg'
+		]);
+
+		$rockMusicImage = Media::factory()->create([
+			'path' => 'storage/sebastian-ervi-uCZVEo8iT9Q-unsplash-min',
+			'extention' => 'jpg'
+		]);
+
+		$RAPMusicImage = Media::factory()->create([
+			'path' => 'storage/gordon-cowie-qQzw8jPvip8-unsplash-min',
+			'extention' => 'jpg'
+		]);
+
+		$ElectronicMusicImage = Media::factory()->create([
+			'path' => 'storage/michael-benz-SP6vKjbUic0-unsplash',
+			'extention' => 'jpg'
+		]);
+
+		$PopMusicImage = Media::factory()->create([
+			'path' => 'storage/aditya-chinchure-ZhQCZjr9fHo-unsplash-min',
+			'extention' => 'jpg'
 		]);
 
 		QuizResult::factory()->count(5)->sequence(
 			[
 				'quiz_id' => $quiz->id,
 				'title' => 'Classical',
-				'description' => 'You have a very mature taste of music.'
+				'description' => 'You have a very mature taste of music.',
+				'media_id' => $classicalMusicImage->id
 			],
 			[
 				'quiz_id' => $quiz->id,
 				'title' => 'Rock',
-				'description' => 'You have a free soul and like to enjoy it.'
+				'description' => 'You have a free soul and like to enjoy it.',
+				'media_id' => $rockMusicImage->id
 			],
 			[
 				'quiz_id' => $quiz->id,
 				'title' => 'Rap',
-				'description' => 'You like to enjoy a poetry of the streets.'
+				'description' => 'You like to enjoy a poetry of the streets.',
+				'media_id' => $RAPMusicImage->id
 			],
 			[
 				'quiz_id' => $quiz->id,
 				'title' => 'Electronic',
-				'description' => 'You really like to party!'
+				'description' => 'You really like to party!',
+				'media_id' => $ElectronicMusicImage->id
 			],
 			[
 				'quiz_id' => $quiz->id,
 				'title' => 'POP',
-				'description' => 'You listen to a top tier artists!'
+				'description' => 'You listen to a top tier artists!',
+				'media_id' => $PopMusicImage->id
 			]
 		)->create();
 

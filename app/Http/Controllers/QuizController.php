@@ -113,7 +113,7 @@ class QuizController extends Controller
 
 	public function result(string $resultId): JsonResponse
 	{
-		$result = QuizResult::where('id', $resultId)->first();
+		$result = QuizResult::with(['media'])->where('id', $resultId)->first();
 
 		return response()->json($result);
 	}
