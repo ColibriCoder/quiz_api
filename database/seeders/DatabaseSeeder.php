@@ -30,27 +30,27 @@ class DatabaseSeeder extends Seeder
 		]);
 
 		$classicalMusicImage = Media::factory()->create([
-			'path' => 'storage/manuel-nageli-NsgsQjHA1mM-unsplash-min2',
+			'path' => 'storage/manuel-nageli-NsgsQjHA1mM-unsplash-mini3',
 			'extention' => 'jpg'
 		]);
 
 		$rockMusicImage = Media::factory()->create([
-			'path' => 'storage/sebastian-ervi-uCZVEo8iT9Q-unsplash-min2',
+			'path' => 'storage/sebastian-ervi-uCZVEo8iT9Q-unsplash-mini3',
 			'extention' => 'jpg'
 		]);
 
 		$RAPMusicImage = Media::factory()->create([
-			'path' => 'storage/gordon-cowie-qQzw8jPvip8-unsplash-min2',
+			'path' => 'storage/gordon-cowie-qQzw8jPvip8-unsplash-mini3',
 			'extention' => 'jpg'
 		]);
 
 		$ElectronicMusicImage = Media::factory()->create([
-			'path' => 'storage/michael-benz-SP6vKjbUic0-unsplash2',
+			'path' => 'storage/michael-benz-SP6vKjbUic0-unsplash-mini3',
 			'extention' => 'jpg'
 		]);
 
 		$PopMusicImage = Media::factory()->create([
-			'path' => 'storage/aditya-chinchure-ZhQCZjr9fHo-unsplash-min2',
+			'path' => 'storage/aditya-chinchure-ZhQCZjr9fHo-unsplash-mini3',
 			'extention' => 'jpg'
 		]);
 
