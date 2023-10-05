@@ -8,11 +8,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class QuizQuestion extends Model
 {
 	use HasFactory;
-	// protected $table = 'quizzes_questions';
-	// public function getRouteKeyName()
-    // {
-    //     return 'external_key';
-    // }
 
 	public function answers(): HasMany
 	{

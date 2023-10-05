@@ -10,8 +10,6 @@ use App\Models\Quiz;
  */
 class QuizFactory extends Factory
 {
-	// protected $model = Quiz::class;
-
     /**
      * Define the model's default state.
      *

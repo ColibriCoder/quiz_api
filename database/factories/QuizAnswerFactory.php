@@ -24,12 +24,4 @@ class QuizAnswerFactory extends Factory
 			'title' => fake()->sentence(1)
         ];
     }
-
-	// public function configure(): static
-    // {
-    //     return $this->afterCreating(function (QuizAnswer $quizAnswer) {
-	// 		// dd($quizAnswer);
-	// 		$quizAnswer->results()->sync([QuizResult::all()->random()->id]);
-    //     });
-    // }
 }

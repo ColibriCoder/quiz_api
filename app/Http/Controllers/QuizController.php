@@ -4,13 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
-
 use App\Models\Quiz;
 use App\Models\QuizQuestion;
 use App\Models\QuizResult;
-use App\Http\Resources\QuizResource;
-use Illuminate\Support\Facades\DB;
-// use Illuminate\Database\Query\JoinClause;
 
 class QuizController extends Controller
 {
@@ -20,20 +16,7 @@ class QuizController extends Controller
      */
     public function index(): JsonResponse
     {
-		// dd(Quiz::select('external_key', 'title')->get());
-		// return new QuizResource(Quiz::first());
-		// dd(Quiz::select('external_key', 'title')->first());
-		// return new QuizResource(Quiz::select('external_key', 'title')->get());
-        // // dd(\Illuminate\Support\Str::uuid());
         $quiz = Quiz::with('media')->select('id', 'external_key', 'title', 'description', 'media_id')->get();
-
-		// dd($quiz);
-
-		
-
-        // // dd($user);
-
-        // return $user;
 
 		return response()->json($quiz);
     }
@@ -67,11 +50,7 @@ class QuizController extends Controller
 
 		$quiz->questions_count = QuizQuestion::where('quiz_id', $quiz->id)->count();
 
-		// dd(Quiz)
-		// $request
-		// dd($quiz);
 		return response()->json($quiz);
-        //
     }
 
     /**
@@ -102,6 +81,7 @@ class QuizController extends Controller
 	{
 		$questions = QuizQuestion::where('quiz_id', $quizId)
 			->with(['answers' => ['results:id']])
+			->orderBy('number')
 			->get();
 
 		if (!count($questions)) {
