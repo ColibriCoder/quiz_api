@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
 		$favoriteTypeOfMusicQuizImage = Media::factory()->create([
-			'path' => 'storage/mohammad-metri-1oKxSKSOowE-unsplash-min',
+			'path' => 'storage/mohammad-metri-1oKxSKSOowE-unsplash-min2',
 			'extention' => 'jpg'
 		]);
 
@@ -30,27 +30,27 @@ class DatabaseSeeder extends Seeder
 		]);
 
 		$classicalMusicImage = Media::factory()->create([
-			'path' => 'storage/manuel-nageli-NsgsQjHA1mM-unsplash-min',
+			'path' => 'storage/manuel-nageli-NsgsQjHA1mM-unsplash-min2',
 			'extention' => 'jpg'
 		]);
 
 		$rockMusicImage = Media::factory()->create([
-			'path' => 'storage/sebastian-ervi-uCZVEo8iT9Q-unsplash-min',
+			'path' => 'storage/sebastian-ervi-uCZVEo8iT9Q-unsplash-min2',
 			'extention' => 'jpg'
 		]);
 
 		$RAPMusicImage = Media::factory()->create([
-			'path' => 'storage/gordon-cowie-qQzw8jPvip8-unsplash-min',
+			'path' => 'storage/gordon-cowie-qQzw8jPvip8-unsplash-min2',
 			'extention' => 'jpg'
 		]);
 
 		$ElectronicMusicImage = Media::factory()->create([
-			'path' => 'storage/michael-benz-SP6vKjbUic0-unsplash',
+			'path' => 'storage/michael-benz-SP6vKjbUic0-unsplash2',
 			'extention' => 'jpg'
 		]);
 
 		$PopMusicImage = Media::factory()->create([
-			'path' => 'storage/aditya-chinchure-ZhQCZjr9fHo-unsplash-min',
+			'path' => 'storage/aditya-chinchure-ZhQCZjr9fHo-unsplash-min2',
 			'extention' => 'jpg'
 		]);
 
