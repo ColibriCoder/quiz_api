@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
 		$favoriteTypeOfMusicQuizImage = Media::factory()->create([
-			'path' => 'storage/mohammad-metri-1oKxSKSOowE-unsplash-min2',
+			'path' => 'storage/mohammad-metri-1oKxSKSOowE-unsplash-mini3',
 			'extention' => 'jpg'
 		]);
 
